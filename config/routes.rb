@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
  
-  get 'sessions/new'
-  get 'sessions/create'
+  
   root "users#new"
+  get '/login', to: 'sessions#new'
+  get '/signup', to: 'users#new'
+  
   resources :users
 end
