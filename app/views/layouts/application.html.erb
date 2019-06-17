@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header'%>
+    <div class="container main">
+      <%= yield %>
+    </div>
   </body>
 </html>
