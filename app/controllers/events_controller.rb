@@ -8,8 +8,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    @event = @user.events.build(event_params)
+    @creator = current_user
+    @event = @creator.events.build(event_params)
     if @event.save
       
     else

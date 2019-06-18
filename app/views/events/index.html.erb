@@ -3,7 +3,7 @@
 <div class="">
     <% @events.each do |event| %>
         <p>Title: <%= event.title %></p>
-        <p>Created by: <%= event.user.name %></p>
+        <p>Created by: <%= event.creator.name %></p>
         <hr>
     <% end %>
 </div>

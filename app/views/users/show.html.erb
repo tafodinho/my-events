@@ -1,8 +1,23 @@
-<h1><%= @user.name%> <b>Events</b></h1>
+
 
 <div class="">
-    <% @user.events.each do |event| %>
-        <p>Title: <%= event.title %></p>
+    <div class="col-sm-6">
+        <h1><%= @user.name%> <b>Events</b></h1>
         <hr>
-    <% end %>
+        <% @user.events.each do |event| %>
+            <p>Title: <%= event.title %></p>
+            <hr>
+        <% end %>
+    </div>
+
+    <div class="col-sm-6">
+        <h1>Attended Events<b>Events</b></h1>
+        <hr>
+        <% @user.events.each do |event| %>
+            <p>Title: <%= event.title %></p>
+            <hr>
+        <% end %>
+    </div>
+    
 </div>
+
