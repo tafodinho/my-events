@@ -1,2 +1,8 @@
-<h1>Welcome <%= @user.name %></h1>
-<p>User profile page</p>
+<h1><%= @user.name%> <b>Events</b></h1>
+
+<div class="">
+    <% @user.events.each do |event| %>
+        <p>Title: <%= event.title %></p>
+        <hr>
+    <% end %>
+</div>

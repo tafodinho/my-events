@@ -1,2 +1,9 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<h1>Events List</h1>
+
+<div class="">
+    <% @events.each do |event| %>
+        <p>Title: <%= event.title %></p>
+        <p>Created by: <%= event.user.name %></p>
+        <hr>
+    <% end %>
+</div>

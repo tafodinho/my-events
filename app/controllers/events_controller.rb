@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   def index
+    @events = Event.all
   end
 
   def new
@@ -11,7 +12,7 @@ class EventsController < ApplicationController
     @event = @user.events.build(event_params)
     if @event.save
       
-    else 
+    else
       render 'new'
     end
   end
