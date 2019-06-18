@@ -11,7 +11,7 @@ class EventsController < ApplicationController
     @creator = current_user
     @event = @creator.events.build(event_params)
     if @event.save
-      
+      redirect_to :action => 'index'
     else
       render 'new'
     end
