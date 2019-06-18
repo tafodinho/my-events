@@ -2,7 +2,7 @@
 
 <div class="">
     <% @events.each do |event| %>
-        <p>Title: <%= event.title %></p>
+        <p>Title: <%= link_to event.title, event_path(event) %></p>
         <p>Created by: <%= event.creator.name %></p>
         <hr>
     <% end %>
