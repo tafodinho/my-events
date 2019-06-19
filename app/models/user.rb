@@ -8,4 +8,15 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 6 }
 
     has_secure_password
+
+    def previous_events
+        attended_events.where('date < :current_date',
+                              current_date: DateTime.now)
+      end
+    
+      def upcoming_events
+        attended_events.where('date >= :current_date',
+                              current_date: DateTime.now)
+      end
+    
 end
