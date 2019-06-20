@@ -19,7 +19,7 @@
             <% if event.upcoming%>
                 <p>Title: <%= link_to event.title, event_path(event) %></p>
                 <p>Created by: <%= event.creator.name %></p>
-                <p><button class="btn btn-primary">attend</button></p>
+                <p><%= link_to button_tag("attend", class: "btn btn-primary"), attendance_path(id: event.id) %></p>
                 <p>Date: <%= event.date.strftime("%B %d, %Y") %></p>
                 <hr>
             <% end %>
