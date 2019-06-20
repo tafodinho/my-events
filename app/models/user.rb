@@ -10,13 +10,13 @@ class User < ApplicationRecord
     has_secure_password
 
     def previous_events
-        attended_events.where('date < :current_date',
-                              current_date: DateTime.now)
-      end
-    
-      def upcoming_events
-        attended_events.where('date >= :current_date',
-                              current_date: DateTime.now)
-      end
+      attended_events.where('date < :current_date',
+                            current_date: DateTime.now)
+    end
+  
+    def upcoming_events
+      attended_events.where('date >= :current_date',
+                            current_date: DateTime.now)
+    end
     
 end
