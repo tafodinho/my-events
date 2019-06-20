@@ -23,10 +23,21 @@ end
 
 creators = User.order(:created_at).take(6)
 
-12.times do 
+9.times do 
     title = Faker::Lorem.sentence(3)
     venue = Faker::Lorem.sentence(2)
     date = Faker::Date.forward
+    creators.each{ |creator|
+        creator.events.create!(title: title, venue: venue, date: date)
+    }
+end
+
+creators = User.order(:created_at).offset(6).take(6)
+
+5.times do 
+    title = Faker::Lorem.sentence(3)
+    venue = Faker::Lorem.sentence(2)
+    date = Faker::Date.backward
     creators.each{ |creator|
         creator.events.create!(title: title, venue: venue, date: date)
     }
