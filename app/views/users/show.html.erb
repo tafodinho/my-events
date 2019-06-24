@@ -1,0 +1,23 @@
+
+
+<div class="">
+    <div class="col-sm-6">
+        <h1> Upcoming <b>Events</b></h1>
+        <hr>
+        <% @upcoming.each do |event| %>
+            <p>Title: <%= event.title %></p>
+            <hr>
+        <% end %>
+    </div>
+
+    <div class="col-sm-6">
+        <h1>Attended <b>Events</b></h1>
+        <hr>
+        <% @prev_events.each do |event| %>
+            <p>Title: <%= event.title %></p>
+            <hr>
+        <% end %>
+    </div>
+    
+</div>
+

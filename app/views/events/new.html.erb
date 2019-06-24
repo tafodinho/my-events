@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <h1>Create New Event</h1>
+  
+    <%= form_for(@event) do |f| %>
+      <%= render 'shared/event_errors'%>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :venue %>
+      <%= f.text_field :venue %>
+
+      <%= f.label :date %>
+      # <%= f.date_field :date, data: { provide:'datepicker' } %>
+     
+
+
+      <%= f.submit "Create Event", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
